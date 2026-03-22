@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UINO 低空反制指挥调度平台</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              police: {
+                900: '#0B1121', // Deepest background
+                800: '#151e32', // Panel background
+                700: '#1e293b', // Borders
+                500: '#3b82f6', // Primary Blue
+                400: '#22d3ee', // Cyan accent
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'system-ui', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Custom Scrollbar for Webkit */
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1; /* slate-300 for light */
+        border-radius: 3px;
+      }
+      .dark ::-webkit-scrollbar-track {
+        background: #0B1121; 
+      }
+      .dark ::-webkit-scrollbar-thumb {
+        background: #1e293b; 
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #3b82f6; 
+      }
+      
+      /* Grid Pattern for Map Background */
+      .bg-grid-pattern {
+        background-image: linear-gradient(to right, #e2e8f0 1px, transparent 1px),
+                          linear-gradient(to bottom, #e2e8f0 1px, transparent 1px);
+        background-size: 40px 40px;
+      }
+      .dark .bg-grid-pattern {
+        background-image: linear-gradient(to right, #1e293b 1px, transparent 1px),
+                          linear-gradient(to bottom, #1e293b 1px, transparent 1px);
+      }
+      
+      /* CSS2D Renderer Label Styles */
+      .map-label {
+        color: white;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 12px;
+        text-shadow: 0 0 4px black;
+        pointer-events: none;
+        user-select: none;
+        margin-top: -20px;
+      }
+    </style>
+  
+  <script type="module" crossorigin src="./assets/index-DFtzly6q.js"></script>
+</head>
+  <body class="bg-slate-50 text-slate-800 dark:bg-[#0B1121] dark:text-slate-200 overflow-hidden transition-colors duration-300">
+    <div id="root"></div>
+  </body>
+</html>
